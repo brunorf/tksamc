@@ -8,7 +8,7 @@ do
 G=`grep 13-Total_dG= Output_''$2''_''$1''_pH_''$ph''_T_300.0.dat | awk '{print $NF}'`
 echo $ph $G >> Gqq-ph_$1''.dat
 done
-/usr/bin/python2 ./plot_Gqq-ph.py -f Gqq-ph_$1''.dat >> output_plot.txt 2> output_2plot.txt
+/usr/bin/python3 ./plot_Gqq-ph.py -f Gqq-ph_$1''.dat >> output_plot.txt 2> output_2plot.txt
 
 zip ${3}.zip *.jpg *.dat *.pdb *. README.txt
 
